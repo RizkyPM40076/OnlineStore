@@ -51,52 +51,65 @@
 
                 <h1 class="font_size">Add Product</h1>
 
-                <div class="div_design">
-                    <label>Product Title :</label>
-                    <input class="text_color" type="text" name="title" placeholder="Write a title">
-                </div>
+                <form action="{{url('/add_product')}}" method="POST" enctype="multipart/form-data">
 
-                <div class="div_design">
-                    <label>Product Description :</label>
-                    <input class="text_color" type="text" name="description" placeholder="Write a description">
-                </div>
-                
-                <div class="div_design">
-                    <label>Product Price :</label>
-                    <input class="text_color" type="number" name="price" placeholder="Write a Price">
-                </div>
+                    @csrf
 
-                <div class="div_design">
-                    <label>Discount Price :</label>
-                    <input class="text_color" type="number" name="dis_price" placeholder="Write a Discount is ap">
-                </div>
+                    <div class="div_design">
+                        <label>Product Title :</label>
+                        <input class="text_color" type="text" name="title" placeholder="Write a title" required="">
+                    </div>
 
-                <div class="div_design">
-                    <label>Product Quantity :</label>
-                    <input class="text_color" type="number" min="0" name="quantity" placeholder="Write a quantity">
-                </div>
+                    <div class="div_design">
+                        <label>Product Description :</label>
+                        <input class="text_color" type="text" name="description" placeholder="Write a description" required="">
+                    </div>
+                    
+                    <div class="div_design">
+                        <label>Product Price :</label>
+                        <input class="text_color" type="number" name="price" placeholder="Write a Price" required="">
+                    </div>
 
-            
+                    <div class="div_design">
+                        <label>Discount Price :</label>
+                        <input class="text_color" type="number" name="dis_price" placeholder="Write a Discount is apply">
+                    </div>
 
-                <div class="div_design">
+                    <div class="div_design">
+                        <label>Product Quantity :</label>
+                        <input class="text_color" type="number" min="0" name="quantity" placeholder="Write a quantity" required="">
+                    </div>
 
-                    <label>Product Catagory :</label>
-                    <select class="text_color" name="catagory">
-                        <option>Shirt</option>
-                    </select>
-
-                </div>
                 
 
-                <div class="div_design">
-                    <label>Product Image Here :</label>
+                    <div class="div_design">
 
-                    <input type="file" name="image">
-                </div>
+                        <label>Product Catagory :</label>
+                        <select class="text_color" name="catagory" required="">
+                            <option value="" selected="">Add a catagory here</option>
 
-                <div class="div_design">
-                    <input type="submit">
-                </div>
+                            @foreach($catagory as $catagory)
+                            
+                            <option value="{{ $catagory->catagory_name }}">{{ $catagory->catagory_name }}</option>
+
+                            @endforeach
+
+                        </select>
+
+                    </div>
+                    
+
+                    <div class="div_design">
+                        <label>Product Image Here :</label>
+
+                        <input type="file" name="image" required="">
+                    </div>
+
+                    <div class="div_design">
+                        <input type="submit" value="Add Product" class="btn btn-primary">
+                    </div>
+
+                </form>
 
             </div>
 

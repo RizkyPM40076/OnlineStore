@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Catagory;
 
+use App\Models\Product;
+
 class AdminController extends Controller
 {
     public function view_catagory()
@@ -39,6 +41,12 @@ class AdminController extends Controller
 
     public function view_product()
     {
-        return view('admin.product');
+        $catagory=catagory::all();
+        return view('admin.product',compact('catagory'));
+    }
+
+    public function add_product(Request $request)
+    {
+
     }
 }
