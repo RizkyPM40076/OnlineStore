@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +30,5 @@ Route::middleware([
 });
 
 Route::get('/redirect', [HomeController::class, 'redirect']);
+
+Route::get('/view_catagory', [AdminController::class, 'view_catagory']);
