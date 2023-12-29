@@ -47,6 +47,16 @@
         <div class="main-panel">
           <div class="content-wrapper">
 
+          @if(session()->has('message'))
+
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+            {{ session()->get('message') }}
+
+          </div>
+
+          @endif
+
             <div class="div_center">
 
                 <h1 class="font_size">Add Product</h1>
