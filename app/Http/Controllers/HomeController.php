@@ -82,7 +82,7 @@ class HomeController extends Controller
 
            $cart->image=$product->image;
 
-           $cart->product_title=$product->id;
+           $cart->Product_id=$product->id;
 
            $cart->quantity=$request->quantity;
 
@@ -100,5 +100,13 @@ class HomeController extends Controller
         {
             return redirect('login');
         }
+    }
+
+    public function show_cart()
+    {
+        $id=Auth::user()->id;
+        $cart=cart::where('user_id','=','$id')->get();
+
+        return view('home.showcart', compact('cart'));
     }
 }
