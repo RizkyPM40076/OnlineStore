@@ -40,4 +40,20 @@ class HomeController extends Controller
 
         return view('home.product_details',compact('product'));
     }
+
+    public function add_cart($id)
+    {
+        if(Auth::id())
+        {
+
+            return redirect()->back();
+
+        }
+
+        else
+
+        {
+            return redirect('login');
+        }
+    }
 }
