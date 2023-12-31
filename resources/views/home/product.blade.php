@@ -12,8 +12,8 @@
                   <div class="box">
                      <div class="option_container">
                         <div class="options">
-                           <a href="" class="option1">
-                           Men's Shirt
+                           <a href="{{url('product_details',$products->id)}}" class="option1">
+                           Product Detail
                            </a>
                            <a href="" class="option2">
                            Buy Now
@@ -47,7 +47,7 @@
                         <h6 style="color: gray">
                            Price
                            <br>
-                           Rp.{{ $product->price }}
+                           Rp.{{ $products->price }}
                         </h6>
 
                         @endif
