@@ -69,17 +69,18 @@
 
             </tr>
 
-            @foreach($cart as $cart)
-
-            <tr>
-                <td>{{ $cart->product_title }}</td>
-                <td>{{ $cart->quantity }}</td>
-                <td>{{ $cart->price }}</td>
-                <td></td>
-                <td></td>
-            </tr>
-
-            @endforeach
+           
+              @foreach($cart as $cart)  
+              
+                <tr>
+                    <td>{{$cart->pruduct_title}}</td>
+                    <td>{{$cart->quantity}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              @endforeach
+            
 
         </table>
       </div>
