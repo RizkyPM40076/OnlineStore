@@ -14,6 +14,8 @@
       <title>Famms - Fashion HTML Template</title>
       <!-- bootstrap core css -->
       <link rel="stylesheet" type="text/css" href="home/css/bootstrap.css" />
+      <!-- Tailwind CSS -->
+      <link rel="stylesheet" href="path/to/tailwind.css">
       <!-- font awesome style -->
       <link href="home/css/font-awesome.min.css" rel="stylesheet" />
       <!-- Custom styles for this template -->
@@ -69,6 +71,16 @@
          <!-- end slider section -->
 
       <!-- why section -->
+
+      @if(session()->has('message'))
+
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">X</button>
+            {{ session()->get('message') }}
+
+          </div>
+
+      @endif
       
       <div class="center">
         <table>
@@ -106,6 +118,13 @@
         <div>
          <h1 class="total_deg">Total Price: {{ $totalprice }}</h1>
         </div>
+
+        <div class="text-center">
+            <h1 class="text-2xl font-bold pb-4">Proceed To Order</h1>
+            <a href="{{url('cash_order')}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">Cash On Delivery</a>
+            <a href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Pay Using Card</a>
+         </div>
+
 
       </div>
 
