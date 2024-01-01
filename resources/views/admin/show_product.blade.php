@@ -30,7 +30,7 @@
 
         .th_color
         {
-            background: navy;
+            background: #38425e;
         }
 
         .th_deg
