@@ -49,6 +49,12 @@
          width: 200px;
         }
 
+        .total_deg
+        {
+         font-size: 20px;
+         padding: 40px;
+        }
+
       </style>
 
 
@@ -75,6 +81,8 @@
 
             </tr>
 
+
+              <?php $totalprice=0; ?>
            
               @foreach($cart as $cart)  
               
@@ -83,16 +91,26 @@
                     <td>{{$cart->quantity}}</td>
                     <td>{{$cart->price}}</td>
                     <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
-                    <td></td>
+                    <td>
+                     <a class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onclick="return confirm('Are You Sure To Remove This Product?')" href="{{url('remove_cart',$cart->id)}}">Remove</a>
+                    </td>
                 </tr>
+
+              <?php $totalprice=$totalprice + $cart->price?>
+
               @endforeach
             
 
         </table>
+
+        <div>
+         <h1 class="total_deg">Total Price: {{ $totalprice }}</h1>
+        </div>
+
       </div>
 
       <!-- footer start -->
-      @Include('home.footer')
+     
       <!-- footer end -->
       <div class="cpy_">
          <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
