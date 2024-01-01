@@ -104,9 +104,20 @@ class HomeController extends Controller
 
     public function show_cart()
     {
-        $id=Auth::user()->id;
-        $cart=cart::where('user_id','=','$id')->get();
+        // Periksa apakah pengguna sudah login
+        if (Auth::check()) {
+            // Jika pengguna sudah login, ambil ID pengguna
+            $id = Auth::user()->id;
 
-        return view('home.showcart', compact('cart'));
+            // Ambil data cart berdasarkan user_id
+            $cart = Cart::where('user_id', $id)->get();
+
+            // Kirim data ke view
+            return view('home.showcart', compact('cart'));
+        } else {
+            // Jika pengguna belum login, tambahkan logika atau tindakan yang sesuai
+            // Misalnya, arahkan pengguna untuk login
+            return redirect()->route('login');
+        }
     }
 }

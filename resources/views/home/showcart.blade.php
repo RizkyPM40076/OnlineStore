@@ -40,7 +40,13 @@
         {
             font-size: 30px;
             padding: 5px;
-            background: skyblue;
+            background: gray;
+        }
+
+        .img_deg
+        {
+         height: 100px;
+         width: 200px;
         }
 
       </style>
@@ -73,10 +79,10 @@
               @foreach($cart as $cart)  
               
                 <tr>
-                    <td>{{$cart->pruduct_title}}</td>
+                    <td>{{$cart->product_title}}</td>
                     <td>{{$cart->quantity}}</td>
-                    <td></td>
-                    <td></td>
+                    <td>{{$cart->price}}</td>
+                    <td><img class="img_deg" src="/product/{{$cart->image}}"></td>
                     <td></td>
                 </tr>
               @endforeach
