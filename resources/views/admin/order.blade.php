@@ -49,16 +49,17 @@
 
             <table class="table_deg">
                 <tr class="th_deg">
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Address</th>
-                    <th>phone</th>
-                    <th>Product_title</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Payment Status</th>
-                    <th>Delivery Status</th>
-                    <th>Image</th>
+                    <th style="padding: 10px">Name</th>
+                    <th style="padding: 10px">Email</th>
+                    <th style="padding: 10px">Address</th>
+                    <th style="padding: 10px">phone</th>
+                    <th style="padding: 10px">Product_title</th>
+                    <th style="padding: 10px">Quantity</th>
+                    <th style="padding: 10px">Price</th>
+                    <th style="padding: 10px">Payment Status</th>
+                    <th style="padding: 10px">Delivery Status</th>
+                    <th style="padding: 10px">Image</th>
+                    <th style="padding: 10px">Delivered</th>
                 </tr>
 
                 @foreach($order as $order)
@@ -75,6 +76,17 @@
                     <td>{{ $order->delivery_status }}</td>
                     <td>
                         <img class="img_size" src="/product/{{$order->image}}">
+                    </td>
+
+                    <td>
+                        @if($order->delivery_status=='processing')
+                        <a href="{{url('delivered',$order->id)}}" onclick="return confirm('Are You Sure?')" class="btn btn-primary">Delivered</a>
+
+                        @else
+
+                        <p style="color:green">Delivered</p>
+
+                        @endif
                     </td>
                 </tr>
 
