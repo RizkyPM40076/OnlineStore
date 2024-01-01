@@ -23,11 +23,12 @@
 
     <div class="hero_area">
          <!-- header section strats -->
-         @Include('home.header')
+         <span style="font-size: 18px">@Include('home.header')</span>
+         
     
 <div class="container">
     
-    <h1>Pay Using Your Card - Total Amount Rp.{{$totalprice}}</h1>
+    <h1 style="text-align: center; font-size: 25px; padding-bottom: 25px">Pay Using Your Card - Total Amount Rp.{{$totalprice}}</h1>
     
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -94,10 +95,10 @@
                             </div>
                         </div>
     
-                        <div class="flex justify-center mt-4">
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                Pay Now
-                            </button>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="submit" name="" value="Pay Now">
+                            </div>
                         </div>
                             
                     </form>
