@@ -122,7 +122,7 @@
         <div class="text-center">
             <h1 class="text-2xl font-bold pb-4">Proceed To Order</h1>
             <a href="{{url('cash_order')}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2">Cash On Delivery</a>
-            <a href="#" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Pay Using Card</a>
+            <a href="{{url('stripe',$totalprice)}}" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Pay Using Card</a>
          </div>
 
 
