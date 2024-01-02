@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     @include('admin.css')
 
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
     <style type="text/css">
         .title_deg
         {
@@ -54,11 +56,22 @@
 
             <h1 class="title_deg">All Orders</h1>
 
+            <div style="padding-left: 400px; padding-bottom: 30px">
+              <form action="{{url('search')}}" method="get">
+
+                @csrf
+
+                <input type="text" style="color: black;" name="search" placeholder="Search For Something">
+
+                <input type="submit" value="Search" class="btn btn-outline-primary">
+              </form>
+            </div>
+
             <table class="table_deg">
                 <tr class="th_deg">
-                    <th class="name_column style="padding: 3px">Name</th>
-                    <th class="name_column style="padding: 3px">Email</th>
-                    <th class="name_column style="padding: 3px">Address</th>
+                    <th class="name_column" style="padding: 3px">Name</th>
+                    <th class="name_column" style="padding: 3px">Email</th>
+                    <th class="name_column" style="padding: 3px">Address</th>
                     <th style="padding: 3px">phone</th>
                     <th style="padding: 3px">Product_title</th>
                     <th style="padding: 3px">Quantity</th>
@@ -71,14 +84,14 @@
                     <th style="padding: 3px"> Send Email</th>
                 </tr>
 
-                @foreach($order as $order)
+                @forelse($order as $order)
 
                 <tr>
                     <td class="name_column">{{ $order->name }}</td>
                     <td class="name_column">{{ $order->email }}</td>
-                    <td>{{ $order->address }}</td>
-                    <td>{{ $order->phone }}</td>
-                    <td>{{ $order->product_title }}</td>
+                    <td class="name_column">{{ $order->address }}</td>
+                    <td class="name_column">{{ $order->phone }}</td>
+                    <td class="name_column">{{ $order->product_title }}</td>
                     <td>{{ $order->quantity }}</td>
                     <td>{{ $order->price }}</td>
                     <td>{{ $order->payment_status }}</td>
@@ -110,7 +123,15 @@
 
                 </tr>
 
-                @endforeach
+                @empty
+
+                <tr>
+                  <td colspan="16">
+                    No Data Found
+                  </td>
+                </tr>
+
+                @endforele
             </table>
 
           </div>
@@ -121,5 +142,6 @@
     <!-- plugins:js -->
     @include('admin.script')
     <!-- End custom js for this page -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
   </body>
 </html>
