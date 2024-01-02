@@ -84,7 +84,7 @@
                     <th style="padding: 3px"> Send Email</th>
                 </tr>
 
-                @forelse($order as $order)
+              @forelse($order as $order)
 
                 <tr>
                     <td class="name_column">{{ $order->name }}</td>
@@ -131,7 +131,7 @@
                   </td>
                 </tr>
 
-                @endforele
+              @endforelse
             </table>
 
           </div>
