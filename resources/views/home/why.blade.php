@@ -100,7 +100,7 @@
                            Fast Delivery
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           🚀 Kami menghadirkan layanan pengiriman cepat dan memberikan pengalaman berbelanja online yang lebih memuaskan!
                         </p>
                      </div>
                   </div>
@@ -215,7 +215,7 @@
                            Free Shiping
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           Promo spesial: Dapatkan ongkos kirim gratis untuk produk pilihanmu, dan gratis ongkir ke seluruh Indonesia!
                         </p>
                      </div>
                   </div>
@@ -236,7 +236,7 @@
                            Best Quality
                         </h5>
                         <p>
-                           variations of passages of Lorem Ipsum available
+                           Kami selalu mengutamakan kualitas terbaik untuk setiap produk yang kami tawarkan, Karena Kepuasan Pembeli Prioritas Kami
                         </p>
                      </div>
                   </div>

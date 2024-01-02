@@ -12,7 +12,7 @@
                         </h2>
                      </div>
                      <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
+                        Pakaian berkualitas, harga murah! Kami menawarkan berbagai produk pakaian yang terbaru dan terupdate, mulai dari fashion wanita hingga pakaian anak. Jangan lewatkan kesempatan!
                      </p>
                      <a href="">
                      Shop Now

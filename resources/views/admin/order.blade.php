@@ -31,6 +31,13 @@
             width: 200px;
             height: 100px;
         }
+
+        .name_column {
+            max-width: 80px; /* Sesuaikan lebar maksimal sesuai kebutuhan */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
     </style>
 
   </head>
@@ -49,25 +56,26 @@
 
             <table class="table_deg">
                 <tr class="th_deg">
-                    <th style="padding: 10px">Name</th>
-                    <th style="padding: 10px">Email</th>
-                    <th style="padding: 10px">Address</th>
-                    <th style="padding: 10px">phone</th>
-                    <th style="padding: 10px">Product_title</th>
-                    <th style="padding: 10px">Quantity</th>
-                    <th style="padding: 10px">Price</th>
-                    <th style="padding: 10px">Payment Status</th>
-                    <th style="padding: 10px">Delivery Status</th>
-                    <th style="padding: 10px">Image</th>
-                    <th style="padding: 10px">Delivered</th>
-                    <th style="padding: 10px">Print PDF</th>
+                    <th class="name_column style="padding: 3px">Name</th>
+                    <th class="name_column style="padding: 3px">Email</th>
+                    <th class="name_column style="padding: 3px">Address</th>
+                    <th style="padding: 3px">phone</th>
+                    <th style="padding: 3px">Product_title</th>
+                    <th style="padding: 3px">Quantity</th>
+                    <th style="padding: 3px">Price</th>
+                    <th style="padding: 3px">Payment Status</th>
+                    <th style="padding: 3px">Delivery Status</th>
+                    <th style="padding: 3px">Image</th>
+                    <th style="padding: 3px">Delivered</th>
+                    <th style="padding: 3px">Print PDF</th>
+                    <th style="padding: 3px"> Send Email</th>
                 </tr>
 
                 @foreach($order as $order)
 
                 <tr>
-                    <td>{{ $order->name }}</td>
-                    <td>{{ $order->email }}</td>
+                    <td class="name_column">{{ $order->name }}</td>
+                    <td class="name_column">{{ $order->email }}</td>
                     <td>{{ $order->address }}</td>
                     <td>{{ $order->phone }}</td>
                     <td>{{ $order->product_title }}</td>
@@ -92,6 +100,12 @@
 
                     <td>
                       <a href="{{url('print_pdf',$order->id)}}" class="btn btn-secondary">Print PDF</a>
+                    </td>
+
+                    <td>
+
+                    <a href="{{url('send_email',$order->id)}}" class="btn btn-info">Send Email</a>
+
                     </td>
 
                 </tr>

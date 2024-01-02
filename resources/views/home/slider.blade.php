@@ -11,13 +11,13 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Diskon Up To 50%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Di Semua Kategori
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 Jangan lewatkan kesempatan untuk tampil stylish dengan pakaian terbaru dari toko online kami! Kami menawarkan berbagai pilihan pakaian yang selalu update, mulai dari dress, celana, kemeja, dan banyak lagi.
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
@@ -36,13 +36,13 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Diskon Up To 50%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Di Semua Kategori
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                    Tampil modis dan menangkan hadiah! Dapatkan kesempatan untuk memenangkan hadiah eksklusif dengan setiap pembelian pakaian terbaru di toko online kami. Jadi, jangan lewatkan kesempatan ini!
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
@@ -61,13 +61,13 @@
                               <div class="detail-box">
                                  <h1>
                                     <span>
-                                    Sale 20% Off
+                                    Diskon Up To 50%
                                     </span>
                                     <br>
-                                    On Everything
+                                    Di Semua Kategori
                                  </h1>
                                  <p>
-                                    Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                                 Tingkatkan gaya Anda dengan koleksi pakaian terbaru. Dari atasan yang trendi hingga jaket yang stylish, toko online kami menawarkan pilihan fashion yang selalu up to date.
                                  </p>
                                  <div class="btn-box">
                                     <a href="" class="btn1">
