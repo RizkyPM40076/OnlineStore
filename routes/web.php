@@ -83,6 +83,10 @@ Route::get('/show_order',[HomeController::class, 'show_order']);
 
 Route::get('/cancel_order/{id}', [HomeController::class, 'cancel_order']);
 
+Route::get('/about', [HomeController::class, 'about']);
+
+Route::get('/product_search',[HomeController::class, 'product_search']);
+
 
 
 

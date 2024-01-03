@@ -18,6 +18,8 @@ use Session;
 
 use Stripe;
 
+use RealRashid\SweetAlert\Facades\Alert;
+
 class HomeController extends Controller
 {
 
@@ -113,6 +115,8 @@ class HomeController extends Controller
 
 
            $cart->save();
+
+           Alert::success('Product Telah Di Tambahkan', 'Telah Ditambah Ke Keranjang');
 
            return redirect()->back();
 
@@ -287,6 +291,19 @@ class HomeController extends Controller
 
         return redirect()->back();
 
+    }
+
+    public function product_search(Request $request)
+    {
+        $search_text=$request->search;
+        $product = Product::where('title', 'LIKE', "%$search_text%")->orWhere('catagory', 'LIKE', "$search_text")->paginate(10);
+
+        return view('home.userpage',compact('product'));
+    }
+
+    public function about()
+    {
+        return view('home.about'); // Sesuaikan dengan nama file blade Anda
     }
 
 
