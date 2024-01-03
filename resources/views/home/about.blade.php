@@ -7,10 +7,10 @@
     <!-- Tambahkan tautan ke file Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body class="bg-orange-500">
 
     <!-- Header -->
-    <header class="bg-blue-500 text-white text-center py-4">
+    <header class="bg-pink-500 text-white text-center py-4">
         <h1 class="text-3xl font-bold">About Us</h1>
         <!-- Mungkin tambahkan logo atau elemen header lainnya -->
     </header>
@@ -31,7 +31,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-500 text-white text-center py-4 mt-8">
+    <footer class="bg-pink-500 text-white text-center py-4 mt-8">
         <p>&copy; 2024 Company Name. All rights reserved.</p>
     </footer>
 
